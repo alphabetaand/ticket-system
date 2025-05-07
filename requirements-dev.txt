@@ -1,0 +1,8 @@
+-r requirements.txt  # Inclut toutes les dépendances de production
+
+# Interface graphique desktop (uniquement en local)
+customtkinter==5.2.1
+
+# Outils de développement optionnels
+black==23.9.1        # Formateur de code
+pylint==2.17.4       # Analyseur de code

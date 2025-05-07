@@ -1,0 +1,37 @@
+2025-05-06 19:44:25,822 - INFO - Base de données initialisée avec succès
+2025-05-06 19:44:26,371 - INFO - Démarrage du serveur Flask sur le port 5000
+2025-05-06 19:44:26,550 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.151:5000
+2025-05-06 19:44:26,576 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-06 19:44:29,374 - INFO - 127.0.0.1 - - [06/May/2025 19:44:29] "GET /ping HTTP/1.1" 200 -
+2025-05-06 19:44:29,389 - INFO - Serveur Flask démarré avec succès
+2025-05-06 19:44:31,467 - INFO - 127.0.0.1 - - [06/May/2025 19:44:31] "GET /history HTTP/1.1" 200 -
+2025-05-06 19:44:58,755 - INFO - 192.168.1.156 - - [06/May/2025 19:44:58] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-06 19:45:01,110 - INFO - 192.168.1.156 - - [06/May/2025 19:45:01] "GET / HTTP/1.1" 200 -
+2025-05-06 19:45:58,836 - INFO - 192.168.1.156 - - [06/May/2025 19:45:58] "GET / HTTP/1.1" 200 -
+2025-05-06 19:48:59,656 - INFO - Base de données initialisée avec succès
+2025-05-06 19:49:00,091 - INFO - Démarrage du serveur Flask sur le port 5000
+2025-05-06 19:49:00,171 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.151:5000
+2025-05-06 19:49:00,181 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-06 19:49:03,103 - INFO - 127.0.0.1 - - [06/May/2025 19:49:03] "GET /ping HTTP/1.1" 200 -
+2025-05-06 19:49:03,107 - INFO - Serveur Flask démarré avec succès
+2025-05-06 19:49:05,277 - INFO - 127.0.0.1 - - [06/May/2025 19:49:05] "GET /history HTTP/1.1" 200 -
+2025-05-06 19:55:04,496 - INFO - Base de données initialisée avec succès
+2025-05-06 19:55:05,074 - INFO - Démarrage du serveur Flask sur le port 5000
+2025-05-06 19:55:05,229 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.151:5000
+2025-05-06 19:55:05,237 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-06 19:55:08,088 - INFO - 127.0.0.1 - - [06/May/2025 19:55:08] "GET /ping HTTP/1.1" 200 -
+2025-05-06 19:55:08,094 - INFO - Serveur Flask démarré avec succès
+2025-05-06 19:55:10,122 - INFO - 127.0.0.1 - - [06/May/2025 19:55:10] "GET /history HTTP/1.1" 200 -
+2025-05-06 19:55:24,707 - INFO - 127.0.0.1 - - [06/May/2025 19:55:24] "GET /verify?ticket=2 HTTP/1.1" 200 -
+2025-05-06 19:56:42,604 - INFO - 192.168.1.156 - - [06/May/2025 19:56:42] "GET / HTTP/1.1" 200 -
+2025-05-06 19:56:43,585 - INFO - 192.168.1.156 - - [06/May/2025 19:56:43] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-06 19:57:06,836 - INFO - 192.168.1.156 - - [06/May/2025 19:57:06] "GET / HTTP/1.1" 200 -

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scanner de Tickets</title>
+    <script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 10px; }
+        #scanner { width: 100%; border: 2px solid #333; }
+        #result { padding: 15px; background: #f0f0f0; margin-top: 10px; }
+        .btn { 
+            background: #2A8C36; color: white; 
+            padding: 10px 15px; border: none; 
+            border-radius: 5px; margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Scanner de Tickets</h1>
+    <video id="scanner"></video>
+    <div id="result">Prêt à scanner...</div>
+    
+    <button class="btn" onclick="generateTicket()">Générer Ticket</button>
+    
+    <script>
+        let scanner = new Instascan.Scanner({ 
+            video: document.getElementById('scanner'),
+            mirror: false
+        });
+        
+        scanner.addListener('scan', function(content) {
+            fetch(`/verify?ticket=${content}`)
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('result').innerHTML = `
+                        <strong>Ticket ${data.ticket || content.split(':')[1]}</strong><br>
+                        Statut: <span style="color:${data.status === 'validé' ? 'green' : 'red'}">
+                            ${data.status}
+                        </span>
+                    `;
+                    if (navigator.vibrate) navigator.vibrate(200);
+                });
+        });
+        
+        Instascan.Camera.getCameras()
+            .then(cameras => {
+                if (cameras.length > 0) {
+                    scanner.start(cameras[0]);
+                } else {
+                    document.getElementById('result').innerText = 'Caméra non trouvée';
+                }
+            });
+            
+        function generateTicket() {
+            const ticketNum = prompt("Entrez le numéro de ticket:");
+            if (ticketNum) {
+                fetch('/generate', {
+                    method: 'POST',
+                    body: new URLSearchParams({ ticket_num: ticketNum }),
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+                })
+                .then(response => response.blob())
+                .then(blob => {
+                    const url = URL.createObjectURL(blob);
+                    window.open(url);
+                });
+            }
+        }
+    </script>
+</body>
+</html>
