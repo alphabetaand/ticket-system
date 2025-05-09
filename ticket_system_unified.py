@@ -1,6 +1,6 @@
 import os
-import tkinter as tk
-import customtkinter as ctk
+#import tkinter as tk
+#import customtkinter as ctk
 from urllib.parse import urlparse
 import cv2
 import qrcode
